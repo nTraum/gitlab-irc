@@ -1,6 +1,12 @@
 ## gitlab-irc
 
-Provides IRC notifications for GitLab repositories. Build with sinatra and cinch. Tested on Ruby 2.0.
+Provides IRC notifications for GitLab repositories. Build with Sinatra and cinch.
+
+## Requirements
+
+* Redis
+* Ruby 2.0 (older versions may work as well)
+* tmux / screen
 
 ## Installation & Usage
 
