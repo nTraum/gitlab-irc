@@ -1,6 +1,6 @@
 ## gitlab-irc
 
-Provides IRC notifications for GitLab repositories. Built with Sinatra and cinch.
+Provides IRC notifications for GitLab repositories. Built with Sinatra and cinch. Uses GitLab's web hooks, no voodoo required.
 
 ### Requirements
 
