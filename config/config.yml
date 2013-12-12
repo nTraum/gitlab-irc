@@ -1,0 +1,16 @@
+redis:
+  host: 'localhost'
+  port: 6379
+  namespace: 'gitlab-irc'
+
+irc:
+  server: 'chat.freenode.net'
+  port: 6667
+  poll_interval: 10
+  channel: '#yourcodingchannel'
+  nickname: 'GitLab'
+  verbose: true
+
+web:
+  bind: 'localhost'
+  port: 4567

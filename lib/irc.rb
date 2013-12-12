@@ -1,0 +1,33 @@
+require 'cinch'
+require 'yaml'
+require 'redis'
+
+$config = YAML.load_file(File.join('config', 'config.yml'))
+
+class PollingPlugin
+  include Cinch::Plugin
+
+  timer $config['irc']['poll_interval'], :method => :timed
+
+  def timed
+    redis = Redis.new(:host => $config['redis']['host'], :port => $config['redis']['port'])
+    msg = redis.lpop("#{$config['redis']['namespace']}:messages")
+    redis.quit
+    Channel($config['irc']['channel']).send msg if msg
+  end
+end
+
+bot = Cinch::Bot.new do
+  configure do |c|
+    c.server = $config['irc']['server']
+    c.port = $config['irc']['port']
+    c.channels = [$config['irc']['channel']]
+    c.nick = $config['irc']['nickname']
+    c.realname = $config['irc']['nickname']
+    c.user = $config['irc']['nickname']
+    c.plugins.plugins = [PollingPlugin]
+    c.verbose = $config['irc']['verbose']
+  end
+end
+
+bot.start
