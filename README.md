@@ -2,9 +2,12 @@
 
 Provides IRC notifications for GitLab repositories. Built with Sinatra and cinch. Uses GitLab's web hooks, no voodoo required.
 
+Example:
+
+> [gitlab-irc(master)] nTraum | initial commit | [http://goo.gl/yYTGcM](http://goo.gl/yYTGcM)
 ### Requirements
 
-* Redis
+* Redis (already installed if you run it on the same host as GitLab)
 * Ruby 2.0 (older versions may work as well)
 * tmux / screen
 
