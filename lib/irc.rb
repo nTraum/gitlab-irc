@@ -11,9 +11,11 @@ class PollingPlugin
 
   def timed
     redis = Redis.new(:host => $config['redis']['host'], :port => $config['redis']['port'])
-    msg = redis.lpop("#{$config['redis']['namespace']}:messages")
+    key = "#{$config['redis']['namespace']}:messages"
+    while redis.llen(key) > 0
+      Channel($config['irc']['channel']).send(redis.lpop(key))
+    end
     redis.quit
-    Channel($config['irc']['channel']).send msg if msg
   end
 end
 
