@@ -26,6 +26,7 @@ bot = Cinch::Bot.new do
     c.channels = [$config['irc']['channel']]
     c.nick = $config['irc']['nickname']
     c.realname = $config['irc']['nickname']
+    c.messages_per_second = 1
     c.user = $config['irc']['nickname']
     c.plugins.plugins = [PollingPlugin]
     c.verbose = $config['irc']['verbose']
