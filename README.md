@@ -1,10 +1,12 @@
 ## gitlab-irc
 
-Provides IRC notifications for GitLab repositories. Built with Sinatra and cinch. Uses GitLab's web hooks, no voodoo required.
+Tiny web / IRC application that announces commits for GitLab repositories via IRC.
+Built with Sinatra and cinch. Uses GitLab's web hooks, no voodoo required.
 
-Example:
+Example message:
 
 > [gitlab-irc(master)] nTraum | initial commit | [http://goo.gl/yYTGcM](http://goo.gl/yYTGcM)
+
 ### Requirements
 
 * Redis (already installed if you run it on the same host as GitLab)
