@@ -15,7 +15,7 @@ post '/commit' do
   branch = json['ref'].split('/').last
   json['commits'].each do |commit|
         url = Googl.shorten(commit['url']).short_url
-        commit_message = commit['message'].gsub(/\n/," ")
+        commit_message = commit['message'].lines.first
         irc_message = "[#{json['repository']['name'].capitalize}(#{branch})] #{commit['author']['name']} | #{commit_message} | #{url}"
         redis.rpush("#{config['redis']['namespace']}:messages", irc_message)
         redis.quit
