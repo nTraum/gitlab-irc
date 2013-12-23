@@ -18,6 +18,6 @@ post '/commit' do
         commit_message = commit['message'].lines.first
         irc_message = "[#{json['repository']['name'].capitalize}(#{branch})] #{commit['author']['name']} | #{commit_message} | #{url}"
         redis.rpush("#{config['redis']['namespace']}:messages", irc_message)
-        redis.quit
     end
+  redis.quit
 end
