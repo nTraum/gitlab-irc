@@ -1,8 +1,7 @@
-require 'sinatra'
-require 'multi_json'
-require 'yaml'
-require 'googl'
+require 'message_formatter'
 require 'redis'
+require 'sinatra'
+require 'yaml'
 
 config = YAML.load_file(File.join('config', 'config.yml'))
 
@@ -11,13 +10,7 @@ set :bind, config['web']['bind']
 
 post '/commit' do
   redis = Redis.new(:host => config['redis']['host'], :port => config['redis']['port'])
-  json = MultiJson.load request.body.read
-  branch = json['ref'].split('/').last
-  json['commits'].each do |commit|
-        url = Googl.shorten(commit['url']).short_url
-        commit_message = commit['message'].lines.first
-        irc_message = "[#{json['repository']['name'].capitalize}(#{branch})] #{commit['author']['name']} | #{commit_message} | #{url}"
-        redis.rpush("#{config['redis']['namespace']}:messages", irc_message)
-    end
+  messages = MessageFormatter.messages(request.body.read)
+  messages.each { |msg| redis.rpush("#{config['redis']['namespace']}:messages", msg) }
   redis.quit
 end
