@@ -13,6 +13,7 @@ GEM
       multi_json (~> 1.0)
       multi_xml (>= 0.5.2)
     json (1.8.1)
+    minitest (5.2.0)
     multi_json (1.8.2)
     multi_xml (0.5.5)
     rack (1.5.2)
@@ -33,6 +34,7 @@ DEPENDENCIES
   cinch
   foreman
   googl
+  minitest
   multi_json
   redis
   sinatra
