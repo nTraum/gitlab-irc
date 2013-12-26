@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    ansi (1.4.3)
+    builder (3.2.2)
     cinch (2.0.11)
     dotenv (0.9.0)
     foreman (0.63.0)
@@ -9,13 +11,22 @@ GEM
     googl (0.6.3)
       httparty (~> 0.10.0)
       json (>= 1.4.6)
+    hashie (2.0.5)
     httparty (0.10.2)
       multi_json (~> 1.0)
       multi_xml (>= 0.5.2)
     json (1.8.1)
     minitest (5.2.0)
+    minitest-reporters (1.0.0)
+      ansi
+      builder
+      minitest (>= 5.0)
+      powerbar
     multi_json (1.8.2)
     multi_xml (0.5.5)
+    powerbar (1.0.11)
+      ansi (~> 1.4.0)
+      hashie (>= 1.1.0)
     rack (1.5.2)
     rack-protection (1.5.1)
       rack
@@ -35,6 +46,7 @@ DEPENDENCIES
   foreman
   googl
   minitest
+  minitest-reporters
   multi_json
   redis
   sinatra

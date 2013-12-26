@@ -1,5 +1,5 @@
-require 'minitest/autorun'
-require './lib/message_formatter.rb'
+require './test/test_helper'
+require './lib/message_formatter'
 
 describe MessageFormatter do
   def setup
