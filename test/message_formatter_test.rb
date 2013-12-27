@@ -1,5 +1,5 @@
-require './test/test_helper'
-require './lib/message_formatter'
+require_relative 'test_helper'
+require_relative '../lib/message_formatter'
 
 describe MessageFormatter do
   def setup

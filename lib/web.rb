@@ -1,4 +1,4 @@
-require 'message_formatter'
+require_relative 'message_formatter'
 require 'redis'
 require 'sinatra'
 require 'yaml'
