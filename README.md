@@ -23,4 +23,4 @@ Example message:
 
 ### License
 
-[WTFPL](http://www.wtfpl.net/txt/copying/)
+gitlab-irc is released under the [MIT License](http://opensource.org/licenses/MIT).
