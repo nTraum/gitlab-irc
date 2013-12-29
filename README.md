@@ -26,7 +26,7 @@ Example message:
 
 gitlab-irc is released under the [MIT License](http://opensource.org/licenses/MIT).
 
-## Contributing
+### Contributing
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
