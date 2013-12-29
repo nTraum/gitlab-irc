@@ -11,3 +11,4 @@ matrix:
     - rvm: ruby-head
     - rvm: jruby-head
   fast_finish: true
+script: "bundle exec ruby test/*_test.rb"
