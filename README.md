@@ -11,7 +11,7 @@ Example message:
 
 * Redis (already installed if you run it on the same host as GitLab)
 * Ruby 2.0 (older versions may work as well)
-* tmux / screen
+* (tmux / screen)
 
 ### Installation & Usage
 
