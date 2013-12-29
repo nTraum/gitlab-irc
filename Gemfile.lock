@@ -78,5 +78,5 @@ DEPENDENCIES
   gitlab-irc!
   minitest (~> 5.2)
   minitest-reporters (~> 1.0)
-  rake
+  rake (~> 10.1)
   yard (~> 0.8)
