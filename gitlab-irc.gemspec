@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version                = GitlabIrc::VERSION
   spec.author                 = 'Philipp Preß'
   spec.email                  = 'philipp.press@googlemail.com'
-  spec.summary                = 'Tiny web / IRC application that announces commits for GitLab repositories via IRC.'
-  spec.description            = 'gitlab-irc takes Gitlab\'s web hooks and announces pushed commits in an IRC channel.'
+  spec.summary                = 'IRC notifications for Gitlab.'
+  spec.description            = 'gitlab-irc takes Gitlab\'s web hooks and announces pushed commits in an IRC channel. Built with Sinatra and cinch.'
   spec.homepage               = 'https://github.com/nTraum/gitlab-irc'
   spec.license                = 'MIT'
   spec.post_install_message   = 'Thanks for installing!'
