@@ -1,6 +1,6 @@
 ## gitlab-irc
 
-[![Build Status](https://travis-ci.org/nTraum/gitlab-irc.png?branch=gemify)](https://travis-ci.org/nTraum/gitlab-irc) [![Dependency Status](https://gemnasium.com/nTraum/gitlab-irc.png)](https://gemnasium.com/nTraum/gitlab-irc)
+[![Build Status](https://travis-ci.org/nTraum/gitlab-irc.png?branch=gemify)](https://travis-ci.org/nTraum/gitlab-irc) [![Dependency Status](https://gemnasium.com/nTraum/gitlab-irc.png)](https://gemnasium.com/nTraum/gitlab-irc) [![Code Climate](https://codeclimate.com/github/nTraum/gitlab-irc.png)](https://codeclimate.com/github/nTraum/gitlab-irc)
 
 Tiny web / IRC application that announces commits for GitLab repositories via IRC.
 Built with Sinatra and cinch. Uses GitLab's web hooks, no voodoo required.
