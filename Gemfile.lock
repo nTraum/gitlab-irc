@@ -67,6 +67,7 @@ GEM
     thor (0.18.1)
     tilt (1.4.1)
     tins (0.13.1)
+    yard (0.8.7.3)
 
 PLATFORMS
   ruby
@@ -78,3 +79,4 @@ DEPENDENCIES
   minitest (~> 5.2)
   minitest-reporters (~> 1.0)
   rake
+  yard (~> 0.8)
