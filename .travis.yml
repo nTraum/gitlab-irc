@@ -5,12 +5,9 @@ rvm:
   - 2.0.0
   - jruby-19mode
   - jruby-head
-  - rbx-19mode
   - ruby-head
 matrix:
   allow_failures:
-    - rvm:
-      - ruby-head
-      - jruby-head
+    - rvm: ruby-head
+    - rvm: jruby-head
   fast_finish: true
-script: "bundle exec ruby test/*_test.rb"
