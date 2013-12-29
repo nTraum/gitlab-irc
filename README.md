@@ -11,12 +11,11 @@ Example message:
 
 * Redis (already installed if you run it on the same host as GitLab)
 * Ruby 2.0 (older versions may work as well)
-* (tmux / screen)
+* tmux / screen
 
 ### Installation & Usage
 
-1. Clone the repository: `git clone https://github.com/nTraum/gitlab-irc.git`
-2. Install required gems: `cd gitlab-irc; gem install bundler; bundle`
+1. Install the gem: `gem install gitlab-irc`
 2. Edit `config/config.yml` to your needs (e.g. IRC channel and server)
 3. Start the app: `foreman start` in a tmux / screen shell
 4. Add a web hook pointing to the app: `http://localhost/commit:4567` (host / port may differ, depending on your configuration)
@@ -24,3 +23,11 @@ Example message:
 ### License
 
 gitlab-irc is released under the [MIT License](http://opensource.org/licenses/MIT).
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
