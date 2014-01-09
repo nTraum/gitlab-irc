@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'gitlab-irc/cli'
+
+GitLabIrc::Cli.new(ARGV)
