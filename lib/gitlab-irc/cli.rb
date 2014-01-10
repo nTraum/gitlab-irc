@@ -2,7 +2,7 @@ require 'optparse'
 
 module GitlabIrc
   class Cli
-    def initialize (argv)
+    def initialize(args)
       @options = {}
 
       OptionParser.new do |opts|
@@ -15,13 +15,11 @@ module GitlabIrc
 
         opts.on('-v', '--version', 'Display program version') do
           puts "gitlab-irc #{GitlabIrc::VERSION}"
-          exit
         end
         opts.on('-h', '--help', 'Display this screen') do
           puts opts
-          exit
         end
-      end.parse!
+      end.parse!(args)
     end
   end
 end
