@@ -2,4 +2,4 @@
 
 require 'gitlab-irc/cli'
 
-GitLabIrc::Cli.new(ARGV)
+GitlabIrc::Cli.new(ARGV)

@@ -1,6 +1,6 @@
 require 'optparse'
 
-module GitLabIrc
+module GitlabIrc
   class Cli
     def initialize (argv)
       @options = {}
