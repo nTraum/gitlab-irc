@@ -8,7 +8,7 @@ class MessageFormatter
     branch = info['ref'].split('/').last
     info['commits'].each do |ci|
       url = self.short_url(ci['url'])
-      ci_title = ci['message'].lines.first
+      ci_title = ci['message'].lines.first.chomp
       msg = "[#{info['repository']['name'].capitalize}(#{branch})] #{ci['author']['name']} | #{ci_title} | #{url}"
       msgs << msg
     end
