@@ -8,6 +8,7 @@ irc:
   port: 6667
   poll_interval: 10
   channel: '#yourcodingchannel'
+  channel_password: ''
   nickname: 'GitLab'
   verbose: true
 
