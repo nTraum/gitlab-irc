@@ -13,7 +13,7 @@ Example message:
 ### Requirements
 
 * Redis (already installed if you run it on the same host as GitLab)
-* Ruby 1.9.3 or newer
+* Ruby 1.9.3 or newer (JRuby / Rubinius will do the job as well)
 * (tmux / screen / nohup)
 
 ### Installation & Usage
