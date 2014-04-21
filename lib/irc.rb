@@ -23,7 +23,7 @@ bot = Cinch::Bot.new do
   configure do |c|
     c.server = $config['irc']['server']
     c.port = $config['irc']['port']
-    c.channels = [$config['irc']['channel']]
+    c.channels = [[$config['irc']['channel'], $config['irc']['channel_password']].compact.join(' ')]
     c.nick = $config['irc']['nickname']
     c.realname = $config['irc']['nickname']
     c.messages_per_second = 1
