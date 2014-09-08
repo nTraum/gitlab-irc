@@ -6,6 +6,7 @@ redis:
 irc:
   server: 'chat.freenode.net'
   port: 6667
+  server_password: 'asdfasdfasdf'
   poll_interval: 10
   channel: '#yourcodingchannel'
   channel_password: ''
