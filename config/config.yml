@@ -7,8 +7,8 @@ irc:
   server: 'chat.freenode.net'
   port: 6667
   server_password: 'asdfasdfasdf'
-  poll_interval: 10
-  channel: '#yourcodingchannel'
+  poll_interval: 4
+  channel: '#lmce-gitlab'
   channel_password: ''
   nickname: 'GitLab'
   verbose: true
