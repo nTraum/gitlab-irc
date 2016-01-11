@@ -17,7 +17,13 @@ class MessageFormatter
         end
     elsif info['object_kind'] == 'tag_push'
 
-        msg = "#{info['object_kind']} TAG PUSH MESSAGE"
+        if info['before'] == '0000000000000000000000000000000000000000'
+            new = "New tag"
+        else
+            new = "Tag updated"
+        end
+        
+        msg = "[#{new}] #{info['ref']} by #{info['repository']['name']}"
         msgs << msg    
 
     elsif info['object_kind'] == 'issue'
@@ -41,9 +47,6 @@ class MessageFormatter
         msg = "[#{new}] #{info['object_attributes']['note']} | #{info['object_attributes']['url']}"
         msgs << msg    
 
-    elsif info['object_kind'] == 'merge_request'
-            msg = "#{info['object_kind']} MESSAGE"
-            msgs << msg    
     end
         
     return msgs
