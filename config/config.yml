@@ -1,17 +1,23 @@
 redis:
   host: 'localhost'
   port: 6379
-  namespace: 'gitlab-irc'
+  namespace: 'resque:gitlab'
 
 irc:
   server: 'chat.freenode.net'
   port: 6667
   server_password: 'asdfasdfasdf'
   poll_interval: 4
-  channel: '#lmce-gitlab'
+  channel: '#linuxmce-devel'
   channel_password: ''
   nickname: 'GitLab'
   verbose: true
+
+msg:
+  push: true
+  tag_push: false
+  issue: true
+  note: false
 
 web:
   bind: 'localhost'
