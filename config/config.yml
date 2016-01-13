@@ -18,6 +18,7 @@ msg:
   tag_push: false
   issue: true
   note: false
+  short_uri: true
 
 web:
   bind: 'localhost'
