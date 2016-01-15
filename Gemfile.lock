@@ -6,6 +6,8 @@ GEM
     cinch (2.3.1)
     foreman (0.78.0)
       thor (~> 0.19.1)
+    foreman-export-initd (0.1.1)
+      foreman (>= 0.59.0)
     minitest (5.8.3)
     minitest-reporters (1.1.7)
       ansi
@@ -32,6 +34,7 @@ PLATFORMS
 DEPENDENCIES
   cinch
   foreman
+  foreman-export-initd
   minitest
   minitest-reporters
   multi_json

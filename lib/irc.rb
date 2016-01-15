@@ -32,6 +32,13 @@ bot = Cinch::Bot.new do
     c.plugins.plugins = [PollingPlugin]
     c.verbose = $config['irc']['verbose']
   end
+  on :message, /@[Gg]it[Ll]ab/ do |m|
+    m.reply "#{m.user.nick}, this is the place where we can interact with GitLab!"    
+  end  
+  on :message, /@[Gg]it[Ll]ab [Ww]hats [Uu]p/ do |m|
+    m.reply "#{m.user.nick}, the sky?"
+  end  
+  
 end
 
 bot.start

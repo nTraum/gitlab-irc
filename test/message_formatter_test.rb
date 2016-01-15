@@ -3,7 +3,7 @@ require_relative '../lib/message_formatter'
 
 describe MessageFormatter do
   def setup
-    MessageFormatter.stub :short_url, 'http://goo.gl/abcdefg' do
+    MessageFormatter.stub :short_url, 'http://www.google.de' do
       @messages = MessageFormatter.messages(IO.read('test/support/commit.json'))
     end
   end
