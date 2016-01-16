@@ -55,6 +55,24 @@ class MessageFormatter
         msg = "[#{new}] by #{username} | #{short}"
         msgs << msg
 
+    elsif info['object_kind'] == 'sqlcvs' && config['remote']['sqlcvs'] == true
+
+        commit = info['commit']
+        object_kind = info['object_kind']
+        description = info['description']
+        # short = config['msg']['short_uri'] ? "#{short_url(url)}" : "#{url}"
+        msg = "[#{object_kind}] #{commit} | #{description}"
+        msgs << msg
+
+    elsif info['object_kind'] == 'builder' && config['remote']['builder'] == true
+
+        commit = info['commit']
+        object_kind = info['object_kind']
+        description = info['description']
+        # short = config['msg']['short_uri'] ? "#{short_url(url)}" : "#{url}"
+        msg = "[#{object_kind}] #{commit} | #{description}"
+        msgs << msg
+
     end
         
     return msgs
