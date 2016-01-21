@@ -31,11 +31,13 @@ class MessageFormatter
         msgs << msg    
 
     elsif info['object_kind'] == 'issue' && config['msg']['issue'] == true
-            
+        
+        id = "#{info['repository']['name']}##{info['object_attributes']['iid']}"
+          
         if info['object_attributes']['action'] == 'update'
-            new = "Issue updated"
+            new = "Issue #{id} updated"
         else
-            new = "Issue #{info['object_attributes']['state']}"
+            new = "Issue #{id} #{info['object_attributes']['state']}"
         end
 
         author = info['user']['username']
@@ -47,11 +49,12 @@ class MessageFormatter
           
     elsif info['object_kind'] == 'note' && config['msg']['note'] == true
 
+        id = "#{info['repository']['name']}##{info['issue']['iid']}"
         noteable = info['object_attributes']['noteable_type']
         username = info['user']['username'] 
         url = info['object_attributes']['url']
         short = config['msg']['short_uri'] ? "#{short_url(url)}" : "#{url}"
-        new = "New note on #{noteable}"
+        new = "New note on #{noteable} #{id}"
         msg = "[#{new}] by #{username} | #{short}"
         msgs << msg
 

@@ -8,7 +8,7 @@ irc:
   port: 6667
   server_password: 'asdfasdfasdf'
   poll_interval: 4
-  channel: '#linuxmce-devel'
+  channel: '#lmce-gitlab'
   channel_password: ''
   nickname: 'GitLab'
   verbose: true
@@ -17,7 +17,7 @@ msg:
   push: true
   tag_push: false
   issue: true
-  note: false
+  note: true
   short_uri: true
 
 web:
