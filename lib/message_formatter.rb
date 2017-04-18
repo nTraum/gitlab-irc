@@ -17,6 +17,10 @@ class MessageFormatter
             ci_title = ci['message'].lines.first.chomp
             short = config['msg']['short_uri'] ? "#{short_url(url)}" : "#{url}"
             msg = "[#{info['repository']['name'].capitalize}(#{branch})] by #{ci['author']['name']} | #{ci_title} | #{short}"
+            
+#            puts "#####################################"
+#            puts "[#{info['repository']['name'].capitalize}(#{branch})] by #{ci['author']['name']} | #{ci_title} | #{short}"
+            
             msgs << msg
         end
     elsif info['object_kind'] == 'tag_push' && config['msg']['tag_push'] == true
@@ -77,7 +81,7 @@ class MessageFormatter
         msgs << msg
 
     end
-        
+          
     return msgs
   end
 

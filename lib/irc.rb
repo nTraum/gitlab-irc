@@ -3,6 +3,7 @@ require 'yaml'
 require 'redis'
 
 $config = YAML.load_file(File.join('config', 'config.yml'))
+$stdout.sync = true
 
 class PollingPlugin
   include Cinch::Plugin
@@ -10,7 +11,8 @@ class PollingPlugin
   timer $config['irc']['poll_interval'], :method => :timed
 
   def timed
-    redis = Redis.new(:host => $config['redis']['host'], :port => $config['redis']['port'])
+    #redis = Redis.new(:host => $config['redis']['host'], :port => $config['redis']['port'])
+    redis = Redis.new(:path => "/var/run/redis/redis.sock")
     key = "#{$config['redis']['namespace']}:messages"
     while redis.llen(key) > 0
       Channel($config['irc']['channel']).send(redis.lpop(key))
