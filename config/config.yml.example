@@ -1,0 +1,26 @@
+redis:
+  host: 'localhost'
+  port: 6379
+  namespace: 'resque:gitlab'
+
+irc:
+  server: 'chat.freenode.net'
+  port: 6667
+  server_password: 'IRC_PASSWORD'
+  poll_interval: 4
+  channel: '#your-channel-name'
+  channel_password: ''
+  nickname: 'BOT_NICKNAME'
+  verbose: true
+
+msg:
+  push: true
+  tag_push: false
+  issue: true
+  note: true
+  short_uri: false
+
+web:
+  bind: 'localhost'
+  port: 4567
+
