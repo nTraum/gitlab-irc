@@ -2,10 +2,11 @@ source 'https://rubygems.org'
 
 gem 'cinch'
 gem 'foreman'
-gem 'googl'
+gem 'xml-simple'
 gem 'multi_json'
 gem 'redis'
 gem 'sinatra'
+gem 'foreman-export-initd'
 
 group :test do
   gem 'minitest'
